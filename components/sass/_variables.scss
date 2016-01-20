@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+@import 'fonts';
+@include border-box-sizing; //uses border box sizing like the old IE
+
+$susy: (
+  columns: 12,
+  container: 85%,
+  math: fluid,
+  flow:ltr,
+  output: float,
+  gutters: 1/4,
+  gutter-position: split
+);
+
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+
+//Add Color Palette
+$light-green	: #35CE93;
+$light-blue   : #59ADEB;
+$yellow       : #F5A503;
+$hero-color   : #FF6600;
+$base-color   : #C13B00;
+$black-lighter: #5E6D70;
+$black-light	: #424E4F;
+$black        : #1B1D1E;
+$dark         : #000000;
+$light        : #FFFFFF;
+
+//Font variables
+$fontfamily1       	: 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$myriad           : 'Myriad Set Pro';
+$fontfamilyIran1	: 'IRYekan',segoeui,tahoma;
+$fontfamilyIran2	: 'XTX-BOLD', 'XTX-BLACK',segoeui;
+$fontfamilyIran3  : 'IRANSans',segoeui,tahoma;
+
+$thin     : 200;
+$normal   : 400;
+$bold     : 600;
+$heavy    : 800;
+
+$enBoldFont       : $normal 1em/1.5em $fontfamily1;
+$enFont       : $thin 1em/1.5em $fontfamily1;
+$headFont     : $thin 1.5em/1.5em $fontfamilyIran2;
+$mainFont     : $thin 1em/1.5em $fontfamilyIran1;
+$navFont      : $thin 0.8em/1.2em $fontfamilyIran2;
+$contentFont  : $thin 1em/2.5em $fontfamilyIran3;
+$myriadFont   : $thin 1em/1em $myriad;

@@ -1,0 +1,31 @@
+.nav{
+  font-family: $myriad;
+  width:100%;
+  height: 50px;
+  background: $light-green;
+  ul{
+    background: lighten($dark,30);
+    width:100%;
+    height:100%;
+    li{
+      list-style: none;
+      height:100%;
+      float:left;
+      padding:15px 30px;
+      &:hover{
+      a{
+          background: lighten($dark,40);
+        }
+      }
+      a{
+        width:100%;
+        height:100%;
+        background:#fff;
+        display: inline-block !important;
+        position: relative;
+        text-decoration: none;
+        color: $light;
+      }
+    }
+  }
+}
