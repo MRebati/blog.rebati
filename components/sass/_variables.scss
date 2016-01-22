@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
-@import 'fonts';
 @include border-box-sizing; //uses border box sizing like the old IE
 
 $susy: (
@@ -26,9 +25,11 @@ $hero-color   : #FF6600;
 $base-color   : #C13B00;
 $black-lighter: #5E6D70;
 $black-light	: #424E4F;
-$black        : #1B1D1E;
+$black        : #333333;
 $dark         : #000000;
 $light        : #FFFFFF;
+$grey         : #DBDBDB;
+$red          : #D35050;
 
 //Font variables
 $fontfamily1       	: 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;

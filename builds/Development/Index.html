@@ -8,48 +8,68 @@
 </head>
 
 <body>
-  <header>
-    <nav class="nav">
-      <ul class="nav-bar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Search</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="container">
-    <div class="bar">
-      <ul>
-        <li><a href="#">test</a></li>
-        <li><a href="#">test</a></li>
-        <li><a href="#">test</a></li>
-      </ul>
+  <div id="root">
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-bar">
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item"><a href="#">Contact</a></li>
+            <li class="menu-item"><a href="#">About</a></li>
+            <li class="search-close-li">
+              <a id="search-close">
+                <span class="search-close-right"></span>
+                <span class="search-close-left"></span>
+              </a>
+            </li>
+            <li class="search-bar">
+              <a id="search-icon"></a>
+            </li>
+            <li id="search-input">
+              <form action="/">
+                <span class="search-icon-form"></span>
+                <input type="text" placeholder="Search my Blog">
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="search-curtain"></div>
+    <div class="container">
+      <div class="bar">
+        <!-- <ul>
+          <li><a href="#">test</a></li>
+          <li><a href="#">test</a></li>
+          <li><a href="#">test</a></li>
+        </ul> -->
+      </div>
+      <article class="content">
+        <h1>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar pretium lacus eget pharetra. Suspendisse tempus lacus id odio iaculis gravida. Proin dignissim augue enim. Phasellus commodo sit amet ligula et molestie. Nullam ornare sodales massa
+          ut accumsan. Proin neque tortor, maximus sed porttitor sit amet, semper in felis. Vestibulum vitae cursus justo. Suspendisse cursus sodales diam, at rutrum ante porta ac. Suspendisse a pharetra odio. Praesent scelerisque tortor ac pellentesque
+          consequat. Mauris sit amet placerat elit. Donec nec elementum ipsum. Nulla efficitur neque id tortor consectetur feugiat. Phasellus risus magna, interdum quis risus rhoncus, mattis convallis eros. Suspendisse euismod lectus a nibh tristique
+          pellentesque. Nulla id sapien odio. Ut aliquam augue mauris, vel mollis lectus faucibus ut. Ut posuere dolor felis, fringilla elementum magna rhoncus at. Nullam turpis neque, euismod sit amet tellus semper, posuere imperdiet magna. Quisque mollis
+          venenatis neque et tincidunt. Sed tincidunt, sem in consectetur sollicitudin, dolor quam posuere ex, at sodales magna elit quis massa. Integer rhoncus venenatis urna sed accumsan. Vivamus venenatis dui non dolor ullamcorper, vel ornare nisl
+          mattis. Aenean justo ipsum, tincidunt finibus euismod sed, ornare sagittis quam. Ut ut purus in purus suscipit lacinia. Nulla malesuada, magna laoreet auctor elementum, eros lectus elementum lectus, a ultricies nulla magna ut libero. Praesent
+          purus nunc, ultrices eget malesuada convallis, consectetur ut justo. Vivamus lorem ligula, bibendum non lobortis vel, accumsan sed nisi. Cras in leo at urna consectetur euismod eu sed eros. Aliquam at risus suscipit, vehicula ante in, tempor
+          dolor. Proin rhoncus ultrices sapien, in luctus arcu viverra ac. Pellentesque ac ante eget augue viverra ornare. Sed varius quam urna, sollicitudin pretium elit consequat ac. Quisque volutpat quam nunc. Integer quam tortor, sagittis sed lacus
+          at, rutrum commodo ante. Donec hendrerit eros magna, sit amet malesuada ligula malesuada a. Proin porttitor condimentum metus, quis congue nisi. Nam nibh felis, scelerisque id fringilla aliquam, iaculis sit amet enim. Nam cursus blandit ipsum
+          venenatis mattis. Vivamus rhoncus luctus dolor vel congue. Donec sit amet leo rhoncus, faucibus velit ut, efficitur dui. Nunc vel leo sit amet ligula interdum venenatis. Maecenas lacinia in purus ac maximus. Nam eleifend magna sed malesuada
+          luctus. Vestibulum dolor augue, ultricies quis nisi vitae, suscipit dapibus nibh. Nunc volutpat, mauris a dapibus pulvinar, ipsum felis mollis arcu, in lacinia elit leo et quam. Praesent vehicula dui in mollis feugiat. Aenean pharetra sem vel
+          neque vehicula, sit amet egestas ipsum malesuada. Donec vestibulum sit amet urna eget cursus. Praesent eget dui eu massa blandit fringilla. Vestibulum at lectus a ligula placerat placerat. Aliquam sollicitudin gravida augue vel vestibulum. Ut
+          augue orci, fringilla id maximus nec, vestibulum vitae libero. Fusce orci velit, ultricies id turpis at, feugiat tristique massa. Nullam sed facilisis tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque porttitor, sapien
+          vitae mattis rhoncus, quam diam maximus mauris, eget suscipit velit odio at lorem. Pellentesque ac viverra velit, ac malesuada ante. Fusce suscipit enim at arcu maximus, suscipit scelerisque felis aliquet. Pellentesque vel risus eget enim posuere
+          pretium. Vestibulum sed nunc ultrices, ultrices elit non, hendrerit nulla. </p>
+      </article>
     </div>
-    <article class="content">
-      <h1>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar pretium lacus eget pharetra. Suspendisse tempus lacus id odio iaculis gravida. Proin dignissim augue enim. Phasellus commodo sit amet ligula et molestie. Nullam ornare sodales massa
-        ut accumsan. Proin neque tortor, maximus sed porttitor sit amet, semper in felis. Vestibulum vitae cursus justo. Suspendisse cursus sodales diam, at rutrum ante porta ac. Suspendisse a pharetra odio. Praesent scelerisque tortor ac pellentesque
-        consequat. Mauris sit amet placerat elit. Donec nec elementum ipsum. Nulla efficitur neque id tortor consectetur feugiat. Phasellus risus magna, interdum quis risus rhoncus, mattis convallis eros. Suspendisse euismod lectus a nibh tristique pellentesque.
-        Nulla id sapien odio. Ut aliquam augue mauris, vel mollis lectus faucibus ut. Ut posuere dolor felis, fringilla elementum magna rhoncus at. Nullam turpis neque, euismod sit amet tellus semper, posuere imperdiet magna. Quisque mollis venenatis
-        neque et tincidunt. Sed tincidunt, sem in consectetur sollicitudin, dolor quam posuere ex, at sodales magna elit quis massa. Integer rhoncus venenatis urna sed accumsan. Vivamus venenatis dui non dolor ullamcorper, vel ornare nisl mattis. Aenean
-        justo ipsum, tincidunt finibus euismod sed, ornare sagittis quam. Ut ut purus in purus suscipit lacinia. Nulla malesuada, magna laoreet auctor elementum, eros lectus elementum lectus, a ultricies nulla magna ut libero. Praesent purus nunc, ultrices
-        eget malesuada convallis, consectetur ut justo. Vivamus lorem ligula, bibendum non lobortis vel, accumsan sed nisi. Cras in leo at urna consectetur euismod eu sed eros. Aliquam at risus suscipit, vehicula ante in, tempor dolor. Proin rhoncus ultrices
-        sapien, in luctus arcu viverra ac. Pellentesque ac ante eget augue viverra ornare. Sed varius quam urna, sollicitudin pretium elit consequat ac. Quisque volutpat quam nunc. Integer quam tortor, sagittis sed lacus at, rutrum commodo ante. Donec
-        hendrerit eros magna, sit amet malesuada ligula malesuada a. Proin porttitor condimentum metus, quis congue nisi. Nam nibh felis, scelerisque id fringilla aliquam, iaculis sit amet enim. Nam cursus blandit ipsum venenatis mattis. Vivamus rhoncus
-        luctus dolor vel congue. Donec sit amet leo rhoncus, faucibus velit ut, efficitur dui. Nunc vel leo sit amet ligula interdum venenatis. Maecenas lacinia in purus ac maximus. Nam eleifend magna sed malesuada luctus. Vestibulum dolor augue, ultricies
-        quis nisi vitae, suscipit dapibus nibh. Nunc volutpat, mauris a dapibus pulvinar, ipsum felis mollis arcu, in lacinia elit leo et quam. Praesent vehicula dui in mollis feugiat. Aenean pharetra sem vel neque vehicula, sit amet egestas ipsum malesuada.
-        Donec vestibulum sit amet urna eget cursus. Praesent eget dui eu massa blandit fringilla. Vestibulum at lectus a ligula placerat placerat. Aliquam sollicitudin gravida augue vel vestibulum. Ut augue orci, fringilla id maximus nec, vestibulum vitae
-        libero. Fusce orci velit, ultricies id turpis at, feugiat tristique massa. Nullam sed facilisis tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque porttitor, sapien vitae mattis rhoncus, quam diam maximus mauris, eget
-        suscipit velit odio at lorem. Pellentesque ac viverra velit, ac malesuada ante. Fusce suscipit enim at arcu maximus, suscipit scelerisque felis aliquet. Pellentesque vel risus eget enim posuere pretium. Vestibulum sed nunc ultrices, ultrices elit
-        non, hendrerit nulla. </p>
-    </article>
+    <div id="root_footer"></div>
   </div>
-  <footer>
+  <footer id="footer">
     <div class="container">
       <ul>
-        <li>Title</li>
+        <li class="footer-title">Title</li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
@@ -57,7 +77,7 @@
         <li><a href="#">Test</a></li>
       </ul>
       <ul>
-        <li>Title</li>
+        <li class="footer-title">Title</li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
@@ -65,7 +85,7 @@
         <li><a href="#">Test</a></li>
       </ul>
       <ul>
-        <li>Title</li>
+        <li class="footer-title">Title</li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
@@ -73,7 +93,7 @@
         <li><a href="#">Test</a></li>
       </ul>
       <ul>
-        <li>Title</li>
+        <li class="footer-title">Title</li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
@@ -82,6 +102,7 @@
       </ul>
     </div>
   </footer>
+  <script src="/Scripts/script.js"></script>
 </body>
 
 </html>

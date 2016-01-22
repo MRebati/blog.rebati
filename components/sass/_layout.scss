@@ -1,2 +1,35 @@
 body {
+  font: $myriadFont;
+}
+@include sticky-footer(300px);
+footer {
+  background: $grey;
+  border-top: 2px solid #d3d3d3;
+}
+.container {
+  @include container(70%);
+}
+article.content {
+  margin: 50px 0;
+  animation: 1s ease 0s normal none 1 running fadein;
+  @keyframes fadein {
+    0% {
+      opacity: 0.3;
+      transform: translateX(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  #{headings()} {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-align: left;
+  }
+  p {
+    line-height: 2em !important;
+    text-align: justify;
+  }
 }

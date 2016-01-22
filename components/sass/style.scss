@@ -1,6 +1,6 @@
 // style.scss
 // ==============
- 
+
 //Compass imports
 @import "compass";
 @import "compass/reset";
@@ -9,10 +9,14 @@
 @import 'compass/css3/filter';
 @import "compass/css3/flexbox";
 @import "compass/css3/transition";
+@import "compass/layout/sticky-footer";
 
 //External Libraries
 @import "susy";
 @import "breakpoint";
+
+//Fonts
+@import "fonts";
 
 //Core Partial
 @import "variables";
@@ -22,7 +26,9 @@
 
 //Import Modules
 @import "modules/footer";
+@import "modules/search";
 @import "modules/nav";
+@import "modules/topbar";
 @import "font-awesome/font-awesome";
 
 @include layout($susy float inside);

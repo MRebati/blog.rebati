@@ -1,0 +1,110 @@
+#search-curtain {
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 100%;
+    z-index: 2;
+}
+
+.search-close-li{
+  float:right !important;
+}
+
+#search-close{
+  width:10px;
+  height:10px;
+  cursor: pointer;
+  span{
+    color:$light;
+  }
+  .search-close-right{
+    border-right:1px solid $light;
+    width:20px;
+    height:20px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 4px;
+  }
+  .search-close-left{
+    border-right:1px solid $light;
+    width:20px;
+    height:20px;
+    position: absolute;
+    transform: rotate(-45deg);
+    top:17px;
+  }
+}
+
+
+
+.search-bar{
+  z-index:9999;
+  float:right !important;
+  width: 25px;
+  #search-icon{
+    padding:0 !important;
+    cursor: pointer;
+    height:100%;
+    background: url("../../images/search.svg") no-repeat scroll 0 -2px;
+  }
+}
+
+#search-input{
+  content:" ";
+  width:50%;
+  left:25%;
+  right:25%;
+  position: fixed;
+  top:0;
+  height:40px;
+  .search-icon-form{
+    width:4%;
+    float:left;
+    padding:0 !important;
+    cursor: pointer;
+    height:100%;
+    background: url("../../images/search.svg") no-repeat scroll 0 -2px;
+  }
+  &.search-input-show{
+    animation: 0.3s ease 0s normal none 1 running getin;
+    @keyframes getin {
+      0% {
+        opacity: 0;
+        transform: translateX(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: TranslateX(0px);
+      }
+    }
+  }
+  &.search-input-hide{
+    animation: 0.3s ease 0s normal none 1 running getout;
+    @keyframes getout {
+      0% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+      100% {
+        opacity: 0;
+        transform: TranslateX(10px);
+      }
+    }
+  }
+
+  input[type="text"]{
+    font: $myriadFont;
+    height:100%;
+    border: 0;
+    width:96%;
+    padding:1px 0;
+    background: rgba(0,0,0,0);
+    color: $light;
+    z-index: 9999;
+  }
+}

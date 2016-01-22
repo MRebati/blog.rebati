@@ -1,26 +1,65 @@
-.nav{
-  font-family: $myriad;
+header{
+  z-index: 9999;
   width:100%;
-  height: 50px;
-  background: $light-green;
-  ul{
-    background: lighten($dark,30);
-    width:100%;
-    height:100%;
-    li{
-      list-style: none;
-      height:100%;
-      float:left;
-      padding:15px 30px;
-      &:hover{
-      a{
-          background: lighten($dark,40);
+  height: 40px;
+  background: $black;
+}
+.nav {
+  font-family: $myriad;
+  width: 100%;
+  height:100%;
+  ul {
+    width: 100%;
+    height: 100%;
+    li {
+      &.menu-item{
+        &.search-show{
+          animation: 0.3s ease 0s normal none 1 running getout;
+          @keyframes getout {
+            0% {
+              opacity: 1;
+              transform: translateX(0px);
+            }
+            100% {
+              opacity: 0;
+              transform: TranslateX(10px);
+            }
+          }
+        }
+        &.search-hide{
+          animation: 0.3s ease 0s normal none 1 running getin;
+          @keyframes getin {
+            0% {
+              opacity: 0;
+              transform: translateX(10px);
+            }
+            100% {
+              opacity: 1;
+              transform: TranslateX(0px);
+            }
+          }
         }
       }
-      a{
-        width:100%;
-        height:100%;
-        background:#fff;
+      list-style: none;
+      height: 100%;
+      float: left;
+      transition: 0.3s ease all;
+      &:first-child{
+        a{
+          padding-left: 0 !important;
+        }
+      }
+      &:hover {
+        a {
+          color: darken($light,10);
+          text-shadow: 1px #eee;
+        }
+      }
+      a {
+        transition: ease all 0.3s;
+        width: 100%;
+        height: 100%;
+        padding: 15px 30px;
         display: inline-block !important;
         position: relative;
         text-decoration: none;

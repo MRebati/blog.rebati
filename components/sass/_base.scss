@@ -1,17 +1,23 @@
+html{
+  overflow: auto;
+}
+
+.full-html{
+  position: fixed;
+  overflow-y:scroll
+}
+
 body {
   direction: ltr;
 }
-
 #{headings()} {
- font-weight: $thin;
- font-size:3em;
- line-height: 2em;
+  font-weight: $thin;
+  font-size: 3em;
+  line-height: 2em;
 }
-
 strong {
   font-weight: $bold;
 }
-
 p {
   font-weight: $thin;
   padding-bottom: 10px;
