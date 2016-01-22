@@ -11,7 +11,7 @@
     rgba(0,0,0, $opEnd)
   ),url($image);
   background-repeat: no-repeat;
-  background-position: $bgPos; 
+  background-position: $bgPos;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,3 +28,7 @@
     clear: both;
   } //after
 } //clearfix
+
+.hidden{
+  display: none;
+}

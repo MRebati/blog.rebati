@@ -1,17 +1,23 @@
 $(document).ready(function() {
   'use strict';
   $('#search-input').hide();
+  $('.search-close-li').hide();
   $('html').niceScroll({
     cursorcolor: '#333',
     cursorborder: '0px',
     cursoropacitymin: '0',
     cursoropacitymax: '0.8'
   });
-  $('#search-close').on('click', function() {
+  $('.search-close-li').on('click', function() {
     var menuitem = $('.menu-item');
     var overlay = $('#search-curtain');
-    var searchbtn = $('#search-icon');
-    var closebtn = $('#search-close');
+    var searchbtn = $('.search-bar');
+    var closebtn = $('.search-close-li');
+    $('.search-help').removeClass('search-help-show');
+    $('.search-help').addClass('search-help-hide');
+    setTimeout(function(){
+      $('.search-help').addClass('hidden');
+    });
     $('#search-input').removeClass('search-input-show');
     $('#search-input').addClass('search-input-hide');
     setTimeout(function() {
@@ -23,19 +29,21 @@ $(document).ready(function() {
       setTimeout(function() {
         menuitem.show();
       }, 300);
+        closebtn.removeClass('scaleup');
         closebtn.addClass('scaledown');
         setTimeout(function(){
-          closebtn.hide();
+          closebtn.css('display','none');
+          searchbtn.removeClass('scaledown');
           searchbtn.addClass('scaleup');
-        },200);
+          },200);
     }, 300);
   });
 
   $('#search-icon').on('click', function() {
     var menuitem = $('.menu-item');
     var overlay = $('#search-curtain');
-    var searchbtn = $('#search-icon');
-    var closebtn = $('#search-close');
+    var searchbtn = $('.search-bar');
+    var closebtn = $('.search-close-li');
     menuitem.removeClass('search-hide');
     menuitem.addClass('search-show');
     $('html').addClass('full-html');
@@ -47,9 +55,21 @@ $(document).ready(function() {
       setTimeout(function() {
         $('#search-input').show();
       }, 300);
+      searchbtn.removeClass('scaleup');
       searchbtn.addClass('scaledown');
       setTimeout(function() {
-        closebtn.addClass('scaledown');
+        searchbtn.hide();
+        closebtn.removeClass('scaledown');
+        closebtn.addClass('scaleup');
+        setTimeout(function(){
+          closebtn.css('display','block');
+          $('.search-help').removeClass('search-help-hide').removeClass('hidden');
+          $('.search-help').addClass('search-help-show');
+          setTimeout(function(){
+            $('.search-help.show').show();
+          },300);
+          $('#query').focus();
+        },200);
       }, 200);
     }, 300);
   });

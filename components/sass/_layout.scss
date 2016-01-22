@@ -4,7 +4,6 @@ body {
 @include sticky-footer(300px);
 footer {
   background: $grey;
-  border-top: 2px solid #d3d3d3;
 }
 .container {
   @include container(70%);
