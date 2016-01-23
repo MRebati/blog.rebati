@@ -26,9 +26,12 @@
 
 //Import Modules
 @import "modules/footer";
+@import "modules/comments";
 @import "modules/search";
 @import "modules/nav";
 @import "modules/topbar";
+@import "modules/aside";
+@import "modules/wmd";
 @import "font-awesome/font-awesome";
 
 @include layout($susy float inside);

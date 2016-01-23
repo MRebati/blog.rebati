@@ -6,10 +6,13 @@ footer {
   background: $grey;
 }
 .container {
-  @include container(70%);
+  @include container(85%);
 }
-article.content {
+.content {
+  @include span(9 of 12);
   margin: 50px 0;
+  border-left: 1px solid darken($light,3);
+  padding-left: 10px;
   animation: 1s ease 0s normal none 1 running fadein;
   @keyframes fadein {
     0% {
@@ -31,4 +34,24 @@ article.content {
     line-height: 2em !important;
     text-align: justify;
   }
+
+  blockquote{
+    background:url("/Content/images/navratan-md.png") no-repeat scroll 101%/14%, #f7f7f7 none repeat scroll 0 0;
+    margin-left:20px;
+    display: block;
+    padding:10px;
+  }
+
+  ol{
+    margin-left:20px;
+    list-style-type:decimal;
+  }
+  ul{
+    list-style-type: disc;
+    margin-left:20px;
+  }
+  hr{
+    border:1px solid #eee;
+  }
+
 }

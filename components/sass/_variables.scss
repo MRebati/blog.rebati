@@ -7,7 +7,8 @@ $susy: (
   flow:ltr,
   output: float,
   gutters: 1/4,
-  gutter-position: split
+  gutter-position: split,
+  global-box-sizing: content-box
 );
 
 $narrow: 400px;
@@ -29,6 +30,7 @@ $dark         : #000000;
 $light        : #FFFFFF;
 $grey         : #F2F2F2;
 $red          : #D35050;
+$blue         : #08c;
 
 //Font variables
 $fontfamily1       	: 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;

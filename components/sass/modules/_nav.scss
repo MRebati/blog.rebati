@@ -43,7 +43,7 @@ header{
       list-style: none;
       height: 100%;
       float: left;
-      transition: 0.3s ease all;
+      transition: ease all 0.3s;
       &:first-child{
         a{
           padding-left: 0 !important;

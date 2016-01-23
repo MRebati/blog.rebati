@@ -35,6 +35,7 @@ jsSources = [
   'components/scripts/jquery.scrollmagic.min.js',
   'components/scripts/script.js',
   'components/scripts/jquery.nicescroll.min.js'
+
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
