@@ -1,7 +1,7 @@
 body {
   font: $myriadFont;
 }
-@include sticky-footer(300px);
+@include sticky-footer(400px);
 footer {
   background: $grey;
 }

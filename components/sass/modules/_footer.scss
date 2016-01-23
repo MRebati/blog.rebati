@@ -1,23 +1,42 @@
 footer {
   .container {
+    #copyright{
+      width:100%;
+      border-top:1px solid #ececec;
+      bottom:10px;
+      padding-top:15px;
+      margin-top:20px;
+      display: flex;
+    }
     ul {
       float: left;
       margin: 30px 0;
-      @include span(3 of 12);
+      @include span(2 of 10);
       li.footer-title {
-        margin-bottom: 10px;
+        font-family: $myriad;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: normal;
+        line-height:1.66667;
       }
       li {
-        margin-bottom: 5px;
-        color: $black-lighter;
+        color: $dark;
         height: auto;
         a {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.66667;
+          letter-spacing: noraml;
           display: block;
           position: relative;
-          color: $black;
+          color: $black-lighter;
           text-decoration: none;
         }
       }
     }
   }
+}
+
+.top-space{
+  margin-top:20px;
 }
