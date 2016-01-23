@@ -14,9 +14,9 @@ aside.main-side {
     list-style: none;
     li {
       margin-bottom: 5px;
-      -webkit-transition: ease all ease0.2s;
-      -o-transition: ease all ease0.2s;
-      transition: ease all ease0.2s;
+      -webkit-transition: ease all 0.4s;
+      -o-transition: ease all 0.4s;
+      transition: ease all 0.4s;
       &:hover {
         a {
           background: darken($light,3);
@@ -29,9 +29,9 @@ aside.main-side {
         padding: 10px;
         text-decoration: none;
         color: $black;
-        -webkit-transition: ease all ease0.2s;
-        -o-transition: ease all ease0.2s;
-        transition: ease all ease0.2s;
+        -webkit-transition: ease all 0.4s;
+        -o-transition: ease all 0.4s;
+        transition: ease all 0.4s;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

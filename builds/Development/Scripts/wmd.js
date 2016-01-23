@@ -37,8 +37,8 @@ Attacklab.wmdBase = function(){
 
 	// The text that appears on the upper part of the dialog box when
 	// entering links.
-	var imageDialogText = "<p style='margin-top: 0px'><b>Enter the image URL.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://wmd-editor.com/images/cloud1.jpg   \"Optional title\"</p>";
-	var linkDialogText = "<p style='margin-top: 0px'><b>Enter the web address.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://wmd-editor.com/   \"Optional title\"</p>";
+	var imageDialogText = "<p style='margin-top: 0px'><b>Enter the image URL.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://rebati.ir/images/example.jpg   \"Optional title\"</p>";
+	var linkDialogText = "<p style='margin-top: 0px'><b>Enter the web address.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://rebati.ir/   \"Optional title\"</p>";
 
 	// The default text that appears in the dialog input box when entering
 	// links.
@@ -53,8 +53,8 @@ Attacklab.wmdBase = function(){
 	var pastePollInterval = 100;
 
 	// The link and title for the help button
-	var helpLink = "http://wmd-editor.com/";
-	var helpHoverTitle = "WMD website";
+	var helpLink = "http://rebati.ir/";
+	var helpHoverTitle = "Rebati.ir";
 	var helpTarget = "_blank";
 
 	// -------------------------------------------------------------------

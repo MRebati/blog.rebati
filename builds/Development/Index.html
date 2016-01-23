@@ -48,7 +48,9 @@
       </ul>
     </div>
     <div id="search-curtain"></div>
+
     <div class="container">
+
       <div class="bar">
         <!-- <ul>
           <li><a href="#">test</a></li>
@@ -100,27 +102,33 @@
                   <div class="comment-header"><span><a href="#">@MRebati</a></span>
                     <time>Wednesday</time>
                   </div>
-                  <div class="comment-body"><a href="#">@JohnDoe</a>This is a test Comment. I thought it would be nice.</div>
+                  <div class="comment-body"><p><a href="#">@JohnDoe</a>This is a test Comment. I thought it would be nice.</p></div>
                 </div>
               </li>
             </ul>
           </div>
           <div class="comment-input">
-            <h4>Add a comment</h4>
-            <input type="email" class="comment-email-input" name="email" id="email" placeholder="Your Email">
-            <div id="wmd-editor" class="wmd-panel">
-              <div id="wmd-button-bar"></div>
-              <textarea id="wmd-input"></textarea>
-            </div>
-            <h5 id="preview-title" style="display:none;">Preview</h5>
-            <div id="wmd-preview" class="wmd-panel"></div>
-            <input id="wmd-output" type="hidden" name="comment" class="wmd-panel" />
-            <input type="submit" value="Send" class="btn-submit-comment"/>
+            <h4>Leave a comment</h4>
+            <form action="/">
+              <input type="text" name="name" placeholder="Your Name" class="comment-email-input">
+              <input type="email" class="comment-email-input" name="email" id="email" placeholder="Your Email">
+              <div id="wmd-editor" class="wmd-panel">
+                <div id="wmd-button-bar"></div>
+                <textarea id="wmd-input"></textarea>
+              </div>
+              <div id="wmd-preview" class="wmd-panel"></div>
+              <input id="wmd-output" type="hidden" name="comment" class="wmd-panel" />
+              <input type="submit" value="Send" class="btn-submit-comment" />
+            </form>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="hero" style="background:transparent url('/Content/images/top-bg.jpg') repeat fixed 0 10% / cover ">
+      <h1>Great changes come from inside...</h1>
+      <h2><a href="fb.com/mohammad.rebati"><i class="fa fa-facebook"></i></a><a href="twitter.com/mrebati"><i class="fa fa-twitter"></i></a><a href="google.com/+mohammad.rebati"><i class="fa fa-google"></i></a></h2>
+      <!-- <img src="/Content/images/top-bg.jpg"/> -->
+    </div>
     <div id="root_footer"></div>
   </div>
   <footer id="footer">
