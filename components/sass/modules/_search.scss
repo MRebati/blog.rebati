@@ -10,6 +10,84 @@
   width: 100%;
   z-index: 2;
 }
+.search-ul {
+  list-style: none;
+  li {
+    height: 100%;
+  }
+  li.menu-item {
+    list-style: none;
+    height: 100%;
+    float: left;
+    transition: ease all 0.3s;
+    @include breakpoint(max-width $small) {
+      float: none;
+      width: 100%;
+      background: $black;
+      display: inline-block;
+      position: relative;
+      top: -31px;
+      &:first-child {
+        a {
+          padding-left: 10px;
+        }
+      }
+    }
+    &.search-show {
+      animation: 0.3s ease 0s normal none 1 running getout;
+      @keyframes getout {
+        0% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        100% {
+          opacity: 0;
+          transform: TranslateX(10px);
+        }
+      }
+    }
+    &.search-hide {
+      animation: 0.3s ease 0s normal none 1 running getin;
+      @keyframes getin {
+        0% {
+          opacity: 0;
+          transform: translateX(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: TranslateX(0px);
+        }
+      }
+    }
+  }
+  &:first-child {
+    a {
+      padding-left: 0;
+    }
+  }
+  &:hover {
+    a {
+      color: darken($light,10);
+      text-shadow: 1px #eee;
+    }
+  }
+  a {
+    transition: ease all 0.3s;
+    width: 100%;
+    height: 100%;
+    padding: 15px 30px;
+    display: inline-block !important;
+    position: relative;
+    text-decoration: none;
+    color: $light;
+    @include breakpoint(max-width $small) {
+      padding: 10px;
+      &:hover {
+        background: lighten($black,5);
+      }
+    }
+  }
+}
 .search-close-li {
   float: right !important;
   cursor: pointer;
@@ -23,6 +101,7 @@
     color: $light;
   }
   &:hover {
+    background: transparent;
     span {
       color: darken($light,30);
     }
@@ -57,12 +136,11 @@
 }
 #search-input {
   content: " ";
-  width: 50%;
+  height: 40px;
   left: 25%;
   right: 25%;
-  position: fixed;
   top: 0;
-  height: 40px;
+  width: 95%;
   .search-icon-form {
     width: 4%;
     float: left;
@@ -70,6 +148,9 @@
     cursor: pointer;
     height: 100%;
     background: url(../../images/search.svg) no-repeat scroll 0 -2px;
+    @include breakpoint(max-width $small) {
+      display: none;
+    }
   }
   &.search-input-show {
     animation: 0.3s ease 0s normal none 1 running getin;
@@ -97,7 +178,7 @@
       }
     }
   }
-  input[type="text"] {
+  input[type="search"] {
     font: $myriadFont;
     height: 100%;
     border: 0;
@@ -106,6 +187,10 @@
     background: rgba(0,0,0,0);
     color: $light;
     z-index: 9999;
+    @include breakpoint(max-width $small) {
+      width: 95%;
+      padding: 1px 7px;
+    }
   }
 }
 .scaleup {
@@ -136,14 +221,31 @@
   }
 }
 .search-help {
-  width: 50%;
-  margin: 0 auto;
-  position: absolute;
-  right: 25%;
-  background: $light;
+  background: #ffffff none repeat scroll 0 0;
   height: 273px;
-  z-index: 10000;
+  left: calc(50% - 480px);
+  margin: 0 auto;
   padding: 10px 5px;
+  position: absolute;
+  width: 960px;
+  z-index: 10000;
+  -webkit-transition: ease all .3s;
+  -o-transition: ease all .3s;
+  -ms-transition: ease all .3s;
+  transition: ease all .3s;
+  @include breakpoint(max-width $medium) {
+    width: 90%;
+    left: 5%;
+  }
+  #search-enter {
+    display: none;
+    color: lighten($black,20);
+    font-weight: 200;
+    margin: 0 auto;
+    padding: 1%;
+    position: absolute;
+    text-align: center;
+  }
   span {
     font-size: 0.75em;
     box-sizing: content-box;
@@ -158,15 +260,15 @@
     margin-top: 5px;
     list-style: none;
     li {
-      height:35px;
+      height: 35px;
       margin-bottom: 5px;
       -webkit-transition: ease all 0.2s;
       -o-transition: ease all 0.2s;
       transition: ease all 0.2s;
       a {
-        padding:10px 50px;
-        width:100%;
-        height:100%;
+        padding: 10px 50px;
+        width: 100%;
+        height: 100%;
         font-size: 15px;
         font-weight: 400;
         white-space: nowrap;
@@ -186,8 +288,7 @@
     }
   }
 }
-
-.search-help-show{
+.search-help-show {
   animation: 0.3s ease 0s normal none 1 running getin;
   @keyframes getin {
     0% {
@@ -200,8 +301,7 @@
     }
   }
 }
-
-.search-help-hide{
+.search-help-hide {
   animation: 0.3s ease 0s normal none 1 running getout;
   @keyframes getout {
     0% {

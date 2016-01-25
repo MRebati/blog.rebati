@@ -4,12 +4,14 @@ html{
 
 .full-html{
   position: fixed;
-  overflow-y:scroll
+  overflow-y:scroll;
+  width:100%;
 }
 
 body {
   direction: ltr;
 }
+
 #{headings()} {
   font-weight: $thin;
   font-size: 3em;
@@ -21,4 +23,15 @@ strong {
 p {
   font-weight: $thin;
   padding-bottom: 10px;
+}
+
+blockquote p{
+  quotes: "“" "”";
+  color:$light-green;
+}
+blockquote p:before {
+    content: open-quote;
+}
+blockquote p:after {
+    content: close-quote;
 }

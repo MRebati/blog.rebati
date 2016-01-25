@@ -1,23 +1,37 @@
 footer {
+  @include breakpoint(max-width $medium) {
+    background: $light;
+  }
   .container {
-    #copyright{
+    #copyright {
+      font-weight: 200;
+      font-size:12px;
+      bottom: 10px;
+      display: block;
+      padding-top: 12px;
+      text-align: right;
       width:100%;
-      border-top:1px solid #ececec;
-      bottom:10px;
-      padding-top:15px;
-      margin-top:20px;
-      display: flex;
     }
+
     ul {
       float: left;
       margin: 30px 0;
       @include span(2 of 10);
+      @include breakpoint(max-width $medium) {
+        @include span(3 of 12);
+      }
+      @include breakpoint(max-width $small) {
+        @include span(4 of 12);
+      }
+      @include breakpoint(max-width $narrow) {
+        @include span(6 of 12);
+      }
       li.footer-title {
         font-family: $myriad;
         font-size: 12px;
         font-weight: 500;
         letter-spacing: normal;
-        line-height:1.66667;
+        line-height: 1.66667;
       }
       li {
         color: $dark;
@@ -28,15 +42,20 @@ footer {
           line-height: 1.66667;
           letter-spacing: noraml;
           display: block;
+          overflow: hidden;
           position: relative;
           color: $black-lighter;
           text-decoration: none;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          &:hover {
+            color: $blue;
+          }
         }
       }
     }
   }
 }
-
-.top-space{
-  margin-top:20px;
+.top-space {
+  margin-top: 20px;
 }

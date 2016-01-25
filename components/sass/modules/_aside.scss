@@ -1,4 +1,7 @@
 aside.main-side {
+  @include breakpoint(max-width $small) {
+    display: none;
+  }
   @include span(3 of 12);
   min-height: 500px;
   margin-top: 60px;

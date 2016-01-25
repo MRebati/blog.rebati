@@ -32,14 +32,14 @@ $(document).ready(function() {
     cursoropacitymax: '0.8'
   });
 
-  function closeSearch(){
+  function closeSearch() {
     var menuitem = $('.menu-item');
     var overlay = $('#search-curtain');
     var searchbtn = $('.search-bar');
     var closebtn = $('.search-close-li');
     $('.search-help').removeClass('search-help-show');
     $('.search-help').addClass('search-help-hide');
-    setTimeout(function(){
+    setTimeout(function() {
       $('.search-help').addClass('hidden');
     });
     $('#search-input').removeClass('search-input-show');
@@ -53,17 +53,17 @@ $(document).ready(function() {
       setTimeout(function() {
         menuitem.show();
       }, 300);
-        closebtn.removeClass('scaleup');
-        closebtn.addClass('scaledown');
-        setTimeout(function(){
-          closebtn.css('display','none');
-          searchbtn.removeClass('scaledown');
-          searchbtn.addClass('scaleup');
-          },200);
+      closebtn.removeClass('scaleup');
+      closebtn.addClass('scaledown');
+      setTimeout(function() {
+        closebtn.css('display', 'none');
+        searchbtn.removeClass('scaledown');
+        searchbtn.addClass('scaleup');
+      }, 200);
     }, 300);
   }
 
-  function openSearch(){
+  function openSearch() {
     var menuitem = $('.menu-item');
     var overlay = $('#search-curtain');
     var searchbtn = $('.search-bar');
@@ -85,20 +85,20 @@ $(document).ready(function() {
         searchbtn.hide();
         closebtn.removeClass('scaledown');
         closebtn.addClass('scaleup');
-        setTimeout(function(){
-          closebtn.css('display','block');
+        setTimeout(function() {
+          closebtn.css('display', 'block');
           $('.search-help').removeClass('search-help-hide').removeClass('hidden');
           $('.search-help').addClass('search-help-show');
-          setTimeout(function(){
+          setTimeout(function() {
             $('.search-help.show').show();
-          },300);
+          }, 300);
           $('#query').focus();
-        },200);
+        }, 200);
       }, 200);
     }, 300);
   }
 
-  $('#search-curtain').on('click',function(){
+  $('#search-curtain').on('click', function() {
     closeSearch();
   });
 
@@ -109,6 +109,34 @@ $(document).ready(function() {
   $('#search-icon').on('click', function() {
     openSearch();
   });
+  $(window).resize(function() {
+    var width = $(window).width();
+    if (width > 650) {
+      $('.nav-bar').removeAttr('style');
+      $('.search-ul').show();
+    }
+  });
+  $('#menu-icon').on('click', function() {
+    closeSearch();
+    $('.search-ul').fadeToggle();
+
+    $('.nav-bar').slideToggle();
+  });
+
+  $('#query').on('keyup keypress change', function(e) {
+    var text = $('#query').val().length;
+    if(text >= 1){
+      $('#links').fadeOut(function(){
+        $('.search-help').css('height','60px');
+        $('#search-enter').fadeIn();
+      });
+    }else{
+      $('#search-enter').fadeOut(function(){
+        $('.search-help').css('height','273px');
+        $('#links').fadeIn();
+      });
+    }
+});
 });
 
 /* jquery.nicescroll 3.2.0 InuYaksa*2013 MIT http://areaaperta.com/nicescroll */(function(e){var y=!1,D=!1,J=5E3,K=2E3,x=0,L=function(){var e=document.getElementsByTagName("script"),e=e[e.length-1].src.split("?")[0];return 0<e.split("/").length?e.split("/").slice(0,-1).join("/")+"/":""}();Array.prototype.forEach||(Array.prototype.forEach=function(e,c){for(var h=0,l=this.length;h<l;++h)e.call(c,this[h],h,this)});var v=window.requestAnimationFrame||!1,w=window.cancelAnimationFrame||!1;["ms","moz","webkit","o"].forEach(function(e){v||(v=window[e+"RequestAnimationFrame"]);w||(w=

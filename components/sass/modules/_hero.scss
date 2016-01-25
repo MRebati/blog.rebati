@@ -1,33 +1,49 @@
-.hero{
-  height:200px;
-  overflow:hidden;
+.hero {
+  background: transparent url(../../images/top-bg.jpg) repeat fixed 0 10% / cover;
+  height: 200px;
+  overflow: hidden;
   text-align: center;
-  img{
-    filter: blur(19px);
+  img {
+    filter:blur(19px);
     margin: -3%;
     position: relative;
     width: 106%;
   }
-  h1{
-    color:$light;
+  h3 {
+    font-weight: 100;
+    font-size: 2em;
+    color: $light;
     position: relative;
-    top:25%;
+    top: 30px;
+    @include breakpoint(min-width $small) {
+      display: none;
+    }
   }
-  h2{
-    color:$light;
+  h1 {
+    @include breakpoint(max-width $small) {
+      display: none;
+    }
+    color: $light;
     position: relative;
-    top:40px;
-    font-size:24px;
-    a{
-      color:$light;
+    top: 25%;
+    font-weight: 100;
+  }
+  h2 {
+    color: $light;
+    position: relative;
+    top: 40px;
+    font-size: 24px;
+    @include breakpoint(max-width $small) {}
+    a {
+      color: $light;
       text-decoration: none;
-      margin:0 20px;
+      margin: 0 20px;
       -webkit-transition: ease all 0.5s;
       -o-transition: ease all 0.5s;
       -ms-transition: ease all 0.5s;
       transition: ease all 0.5s;
-      &:hover{
-        color:darken($light,10);
+      &:hover {
+        color: darken($light,10);
       }
     }
   }

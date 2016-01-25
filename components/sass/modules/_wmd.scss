@@ -6,6 +6,12 @@
   width:100%;
 }
 
+#comment-input{
+  @include breakpoint(max-width $small){
+    display: none !important;
+  }
+}
+
 .wmd-panel {
     min-width: 500px;
     width: 100%;
@@ -61,7 +67,7 @@
     width: 1px;
 }
 .wmd-button {
-    background-image: url("/Content/images/wmd-buttons.svg");
+    background-image: url("../../images/wmd-buttons.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     display: inline-block;

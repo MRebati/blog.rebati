@@ -1938,7 +1938,7 @@ Attacklab.wmdBase = function(){
 				else {
 					var newText = text.replace(/&/g, "&amp;");
 					newText = newText.replace(/</g, "&lt;");
-					wmd.panels.output.innerHTML = "<pre><code>" + newText + "</code></pre>";
+					wmd.panels.output.innerHTML = "<pre class='prettyprint'><code>" + newText + "</code></pre>";
 				}
 			}
 

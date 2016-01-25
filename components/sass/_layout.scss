@@ -1,18 +1,26 @@
 body {
   font: $myriadFont;
 }
-@include sticky-footer(400px);
+@include sticky-footer(40px);
 footer {
   background: $grey;
 }
 .container {
-  @include container(85%);
+  @include breakpoint(min-width $medium) {
+    @include container(960px);
+  }
+  @include breakpoint(max-width $medium) {
+    @include container(90%);
+  }
 }
 .content {
+  @include breakpoint(max-width $small) {
+    @include span(12 of 12);
+  }
   @include span(9 of 12);
   margin: 50px 0;
-  border-left: 1px solid darken($light,3);
-  padding-left: 10px;
+  // border-left: 1px solid darken($light,3);
+  // padding-left: 10px;
   animation: 1s ease 0s normal none 1 running fadein;
   @keyframes fadein {
     0% {
@@ -25,21 +33,26 @@ footer {
     }
   }
   #{headings()} {
+    @include breakpoint(max-width $small) {
+      font-size: 1.4em;
+    }
+    color:$light-green;
     line-height: 1.5em;
     margin-bottom: 10px;
-    font-size: 2em;
+    font-size: 1.7em;
+    font-weight: 200;
     text-align: left;
   }
   p {
+    @include breakpoint(max-width $small) {
+      font-weight:100;
+    }
     line-height: 2em !important;
-    text-align: justify;
+    // text-align: justify;
   }
 
-  blockquote{
-    background:#f7f7f7 none repeat scroll 0 0;
-    margin-left:20px;
-    display: block;
-    padding:10px;
+  pre,code, pre code{
+    font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
   }
 
   ol{

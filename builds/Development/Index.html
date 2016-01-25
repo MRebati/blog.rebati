@@ -12,11 +12,18 @@
   <div id="root">
     <header>
       <div class="container">
+        <div id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <nav class="nav">
           <ul class="nav-bar">
-            <li class="menu-item"><a href="#">Home</a></li>
-            <li class="menu-item"><a href="#">Contact</a></li>
-            <li class="menu-item"><a href="#">About</a></li>
+            <li class="menu-item"><a href="/Home">Home</a></li>
+            <li class="menu-item"><a href="/Contact">Contact</a></li>
+            <li class="menu-item"><a href="/About">About</a></li>
+          </ul>
+          <ul class="search-ul">
             <li class="search-close-li">
               <a id="search-close">
                 <span class="search-close-right"></span>
@@ -27,25 +34,30 @@
               <a id="search-icon"></a>
             </li>
             <li id="search-input">
-              <form action="/">
-                <span class="search-icon-form"></span>
-                <input type="text" autocomplete="off" placeholder="Search my Blog" id="query" name="q">
-              </form>
+              <div class="container">
+                <form action="/">
+                  <span class="search-icon-form"></span>
+                  <input type="search" autocomplete="off" placeholder="Search my Blog" id="query" name="q">
+                </form>
+              </div>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="search-help hidden">
-      <span>Quick Links</span>
-      <ul class="links">
-        <li><a href="">Start Coding</a></li>
-        <li><a href="">My Applications</a></li>
-        <li><a href="">Recommendations</a></li>
-        <li><a href="">MVC</a></li>
-        <li><a href="">Front End</a></li>
-        <li><a href="">My Projects</a></li>
-      </ul>
+      <strong id="search-enter">Tap Enter to Search...</strong>
+      <div id="links">
+        <span>Quick Links</span>
+        <ul class="links">
+          <li><a href="">Start Coding</a></li>
+          <li><a href="">My Applications</a></li>
+          <li><a href="">Recommendations</a></li>
+          <li><a href="">MVC</a></li>
+          <li><a href="">Front End</a></li>
+          <li><a href="">My Projects</a></li>
+        </ul>
+      </div>
     </div>
     <div id="search-curtain"></div>
 
@@ -61,14 +73,21 @@
       <aside class="main-side">
         <h3>Index</h3>
         <ul class="contents-index">
-          <li><a href=""><i class="fa fa-angle-right"></i>Check this</a></li>
-          <li><a href=""><i class="fa fa-angle-right"></i>Check this</a></li>
-          <li><a href=""><i class="fa fa-angle-right"></i>Check this</a></li>
+          <li><a href="" title="check the new Item here..."><i class="fa fa-angle-right"></i>Check this</a></li>
+          <li><a href="" title="check the new Item here..."><i class="fa fa-angle-right"></i>Check this</a></li>
+          <li><a href="" title="check the new Item here..."><i class="fa fa-angle-right"></i>Check this</a></li>
         </ul>
         <hr>
         <h3>You may like:</h3>
         <ul class="contents-index">
           <li><a href=""><i class="fa fa-external-link"></i>Check this</a></li>
+          <li><a href=""><i class="fa fa-bug"></i>Check this</a></li>
+          <li><a href=""><i class="fa fa-file-text"></i>Check this</a></li>
+        </ul>
+        <hr>
+        <h3>Hot Articles:</h3>
+        <ul class="contents-index">
+          <li><a href=""><i class="fa fa-align-justify"></i>Check this</a></li>
           <li><a href=""><i class="fa fa-bug"></i>Check this</a></li>
           <li><a href=""><i class="fa fa-file-text"></i>Check this</a></li>
         </ul>
@@ -102,12 +121,14 @@
                   <div class="comment-header"><span><a href="#">@MRebati</a></span>
                     <time>Wednesday</time>
                   </div>
-                  <div class="comment-body"><p><a href="#">@JohnDoe</a>This is a test Comment. I thought it would be nice.</p></div>
+                  <div class="comment-body">
+                    <p><a href="#">@JohnDoe</a>This is a test Comment. I thought it would be nice.</p>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="comment-input">
+          <div class="comment-input" id="comment-input">
             <h4>Leave a comment</h4>
             <form action="/">
               <input type="text" name="name" placeholder="Your Name" class="comment-email-input">
@@ -124,8 +145,9 @@
         </div>
       </div>
     </div>
-    <div class="hero" style="background:transparent url('/Content/images/top-bg.jpg') repeat fixed 0 10% / cover ">
+    <div class="hero">
       <h1>Great changes come from inside...</h1>
+      <h3>Find Me...</h3>
       <h2><a href="fb.com/mohammad.rebati"><i class="fa fa-facebook"></i></a><a href="twitter.com/mrebati"><i class="fa fa-twitter"></i></a><a href="google.com/+mohammad.rebati"><i class="fa fa-google"></i></a></h2>
       <!-- <img src="/Content/images/top-bg.jpg"/> -->
     </div>
@@ -133,7 +155,7 @@
   </div>
   <footer id="footer">
     <div class="container">
-      <ul>
+      <!-- <ul>
         <li class="footer-title">Title</li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
@@ -183,12 +205,13 @@
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
         <li><a href="#">Test</a></li>
-      </ul>
+      </ul> -->
       <span id="copyright">Copyright © 2016 Rebati. All rights reserved. </span>
-    </div>
+  </div>
   </footer>
-  <script src="/Scripts/script.js"></script>
-  <script src="/Scripts/wmd.js"></script>
+  <script src="Scripts/script.js"></script>
+  <script src="Scripts/wmd.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
 
 </html>

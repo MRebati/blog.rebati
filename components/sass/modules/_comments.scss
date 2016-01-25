@@ -3,10 +3,10 @@
     height: auto;
     display: block;
     h4{
-      border-top:1px solid #eee;
-      padding-top:10px;
       font-size: 19px;
-      color: $blue;
+      color: $light;
+      background: $blue;
+      padding:5px 10px;
     }
     ul {
       list-style: none !important;
@@ -59,10 +59,10 @@
 
 .comment-input{
     h4{
-      border-top:1px solid #eee;
-      padding-top:10px;
+      background: $light-green;
+      color: $light;
       font-size: 19px;
-      color: $light-green;
+      padding: 5px 10px;
     }
 }
 
