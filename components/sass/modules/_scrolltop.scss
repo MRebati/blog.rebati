@@ -1,0 +1,35 @@
+#topscroll {
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    border-radius: 7px 7px 0 0;
+    bottom: 0;
+    display: flex;
+    height: 20px;
+    margin: 0 auto;
+    position: fixed;
+    right: calc(50% - 30px);
+    text-align: center;
+    width: 60px;
+    z-index: 100;
+    cursor: pointer;
+  div {
+    margin: 0 auto;
+    text-align: center;
+    width: 70px;
+    padding-top: 4px;
+    span {
+      width: 2px;
+      height: 15px;
+      background: #fff;
+      content: " ";
+      position: relative;
+      display: inline-block;
+    }
+  }
+}
+#left-side-top {
+  transform: rotate(45deg);
+}
+#right-side-top {
+  margin-left: 4px;
+  transform: rotate(-45deg);
+}

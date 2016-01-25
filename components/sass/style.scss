@@ -33,6 +33,8 @@
 @import "modules/aside";
 @import "modules/hero";
 @import "modules/wmd";
+@import "modules/scrolltop";
+@import "modules/items";
 @import "font-awesome/font-awesome";
 
 @include layout($susy float inside);

@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <title>Rebati Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link href="Content/dist/css/style.css" rel="stylesheet" />
+  <script src="/Scripts/showdown.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <div class="container">
+        <div id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav">
+          <ul class="nav-bar">
+            <li class="menu-item"><a href="/Home">Home</a></li>
+            <li class="menu-item"><a href="/Contact">Contact</a></li>
+            <li class="menu-item"><a href="/About">About</a></li>
+          </ul>
+          <ul class="search-ul">
+            <li class="search-close-li">
+              <a id="search-close">
+                <span class="search-close-right"></span>
+                <span class="search-close-left"></span>
+              </a>
+            </li>
+            <li class="search-bar">
+              <a id="search-icon"></a>
+            </li>
+            <li id="search-input">
+              <div class="container">
+                <form action="/">
+                  <span class="search-icon-form"></span>
+                  <input type="search" autocomplete="off" placeholder="Search my Blog" id="query" name="q">
+                </form>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="search-help hidden">
+      <strong id="search-enter">Tap Enter to Search...</strong>
+      <div id="links">
+        <span>Quick Links</span>
+        <ul class="links">
+          <li><a href="">Start Coding</a></li>
+          <li><a href="">My Applications</a></li>
+          <li><a href="">Recommendations</a></li>
+          <li><a href="">MVC</a></li>
+          <li><a href="">Front End</a></li>
+          <li><a href="">My Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="search-curtain"></div>
+    <div class="container">
+      <div class="items">
+
+        <!-- Start of items -->
+        <article class="item">
+          <div class="item-header">
+            <h2>Title</h2>
+            <time>Thursday</time>
+          </div>
+          <div class="item-body">
+            <p>This Paragraph is for test</p>
+          </div>
+          <div class="item-footer"><a href="#">Read More...</a></div>
+        </article>
+
+        <article class="item">
+          <div class="item-header">
+            <h2>Build Small MVC Starting Application</h2>
+            <time>21 March 2015</time>
+          </div>
+          <div class="item-body">
+            <p>To Start using MVC Professioanally you need to understand it first. What it's been built with. We are going to talk around all these things in this article. Changes may effect during the Developments. So keep reading. If you had an Issue feel free to tell me. I'd be happy to show you with the Snippets...</p>
+          </div>
+          <div class="item-footer"><a href="#">Read More...</a></div>
+        </article>
+        <!-- End of Items -->
+      </div>
+    </div>
+    <div id="root_footer"></div>
+  </div>
+  <div id="topscroll" style="display:none;">
+    <div>
+      <span id="left-side-top"></span>
+      <span id="right-side-top"></span>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="container">
+      <span id="copyright">Copyright © 2016 Rebati. All rights reserved. </span>
+    </div>
+  </footer>
+  <script src="Scripts/script.js"></script>
+  <script src="Scripts/wmd.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>

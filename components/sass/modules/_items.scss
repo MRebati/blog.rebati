@@ -1,0 +1,108 @@
+.items {
+  margin: 50px 0;
+  // border-left: 1px solid darken($light,3);
+  // padding-left: 10px;
+  animation: 1s ease 0s normal none 1 running fadein;
+  @keyframes fadein {
+    0% {
+      opacity: 0.3;
+      transform: translateX(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  #{headings()} {
+    @include breakpoint(max-width $small) {
+      font-size: 1.4em;
+    }
+    color: $light-green;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    font-size: 1.7em;
+    font-weight: 200;
+    text-align: left;
+  }
+  p {
+    @include breakpoint(max-width $small) {
+      font-weight: 100;
+    }
+    line-height: 2em !important;
+    // text-align: justify;
+  }
+  pre,
+  code,
+  pre code {
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+  }
+  ol {
+    margin-left: 20px;
+    list-style-type: decimal;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  hr {
+    border: 1px solid #eee;
+  }
+}
+.item {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  // &:last-child{
+  //   border-bottom: 0;
+  // }
+  .item-header {
+    padding-left: 5px;
+    margin: 0 3px;
+    border-bottom: 1px solid #eee;
+    display: block;
+    width: calc(100% - 6px);
+    height: 40px;
+    h2 {
+      color: $orange;
+      float: left;
+      font-size: 17px;
+      margin-bottom: 0;
+      padding-top: 7px;
+    }
+    time {
+      float: right;
+      color: darken($grey,10);
+      padding: 12px 10px;
+      @include breakpoint(max-width $small) {
+        display:none;
+      }
+    }
+  }
+  .item-body {
+    padding: 10px;
+  }
+  .item-footer {
+    text-align: right;
+    clear: both;
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+    padding: 0 10px;
+    a {
+      padding: 10px;
+      background: $light-green;
+      color: $light;
+      text-decoration: none;
+      -webkit-transition: ease all 0.3s;
+      -o-transition: ease all 0.3s;
+      -ms-transition: ease all 0.3s;
+      transition: ease all 0.3s;
+      &:hover {
+        background: darken($light-green,10);
+      }
+    }
+  }
+}

@@ -32,6 +32,36 @@ $(document).ready(function() {
     cursoropacitymax: '0.8'
   });
 
+  $(window).on('scroll',function(){
+    if($(window).scrollTop() > 20){
+      $('#topscroll').fadeIn('slow');
+    }
+    else{
+      $('#topscroll').fadeOut('slow');
+    }
+  });
+
+  $('#topscroll').on('click',function(){
+    $("html, body").animate({
+             scrollTop: 0
+        }, 'slow');
+  });
+
+  $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $("html, body").animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
   function closeSearch() {
     var menuitem = $('.menu-item');
     var overlay = $('#search-curtain');

@@ -1,5 +1,6 @@
 body {
   font: $myriadFont;
+  transition: ease all 1s;
 }
 @include sticky-footer(40px);
 footer {
