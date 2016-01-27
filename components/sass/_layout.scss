@@ -19,6 +19,9 @@ footer {
     @include span(12 of 12);
   }
   @include span(9 of 12);
+  &.full{
+    @include span(12 of 12);
+  }
   margin: 50px 0;
   // border-left: 1px solid darken($light,3);
   // padding-left: 10px;
